@@ -1,10 +1,50 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `CV website`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    author: `hello@eddylazar.com`,
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        custom: {
+          families: ['Steinbeck'],
+          urls: ['/fonts/fonts.css'],
+        },
+      },
+    },
+    'gatsby-plugin-theme-ui',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `confs`,
+        path: `${__dirname}/src/data/confs.md`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `education`,
+        path: `${__dirname}/src/data/education.md`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `bio`,
+        path: `${__dirname}/src/data/bio/bio.md`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `experience`,
+        path: `${__dirname}/src/data/experience`,
+      },
+    },
+    `gatsby-transformer-remark`,
+    `gatsby-remark-source-name`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -31,4 +71,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};

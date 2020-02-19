@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Steinbeck';
+  src: url('SteinbeckRegular.otf');
+}
+
+@font-face {
+  font-family: 'Steinbeck';
+  src: url('SteinbeckItalic.otf');
+  font-style: italic;
+}

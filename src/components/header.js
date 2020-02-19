@@ -1,42 +1,29 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import React from 'react';
+import { Box, Flex, useColorMode } from 'theme-ui';
+import LayoutColumn from './LayoutColumn';
+import { Heading, Paragraph } from './Typography';
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+const Header = ({ name = '', jobTitle = '' }) => {
+  const [colorMode, setColorMode] = useColorMode();
+  return (
+    <LayoutColumn bg="primary">
+      <Flex sx={{ justifyContent: 'space-between' }}>
+        <Box>
+          <Heading>{name}</Heading>
+          <Paragraph>{jobTitle}</Paragraph>
+        </Box>
+        <Box>
+          <button
+            onClick={e => {
+              setColorMode(colorMode === 'default' ? 'dark' : 'default');
+            }}
+          >
+            Toggle {colorMode === 'default' ? 'Dark' : 'Light'}
+          </button>
+        </Box>
+      </Flex>
+    </LayoutColumn>
+  );
+};
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
+export default Header;

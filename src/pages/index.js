@@ -1,21 +1,100 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
+import { Box, Flex } from 'theme-ui';
+import Bio from '../components/Bio';
+import Experience from '../components/Experience';
+import Header from '../components/Header';
+import Skills from '../components/Skills';
+import formatExperience from '../utils/formatExperience';
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+export default ({ data }) => {
+  const aboutHtml = data.bio.html;
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+  const {
+    name,
+    interests = [],
+    jobTitle,
+    email,
+    phone,
+    skills,
+    langs,
+  } = data.bio.frontmatter;
 
-export default IndexPage
+  const educationItems = data.education.frontmatter.items;
+  const confItems = data.confs.frontmatter.items;
+
+  const experience = data.experience;
+
+  return (
+    <Flex sx={{ height: '100%', overflow: 'hidden' }}>
+      <Box variant="layout.main">
+        <Header name={name} jobTitle={jobTitle} />
+        <Bio
+          about={aboutHtml}
+          educationList={educationItems}
+          confsList={confItems}
+          interests={interests}
+          email={email}
+          phone={phone}
+        />
+      </Box>
+      <Box variant="layout.skills">
+        <Skills skills={skills} langs={langs} />
+      </Box>
+      <Box variant="layout.experience">
+        <Experience experience={formatExperience(experience)} />
+      </Box>
+    </Flex>
+  );
+};
+
+export const query = graphql`
+  query {
+    confs: markdownRemark(fields: { sourceName: { eq: "confs" } }) {
+      frontmatter {
+        items {
+          name
+          date
+          description
+        }
+      }
+    }
+
+    education: markdownRemark(fields: { sourceName: { eq: "education" } }) {
+      frontmatter {
+        items {
+          name
+          city
+          description
+          dates
+        }
+      }
+    }
+    bio: markdownRemark(fields: { sourceName: { eq: "bio" } }) {
+      frontmatter {
+        jobTitle
+        name
+        email
+        phone
+        skills
+        interests
+        langs
+      }
+      html
+    }
+    experience: allMarkdownRemark(
+      filter: { fields: { sourceName: { eq: "experience" } } }
+    ) {
+      edges {
+        node {
+          id
+          html
+          frontmatter {
+            period
+            title
+            company
+          }
+        }
+      }
+    }
+  }
+`;
