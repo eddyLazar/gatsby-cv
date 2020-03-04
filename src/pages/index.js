@@ -1,9 +1,18 @@
 import React from 'react';
-import { Box, Flex } from 'theme-ui';
-import Bio from '../components/Bio';
-import Experience from '../components/Experience';
+import { Text } from 'theme-ui';
+import { About } from '../components/About';
+import Contacts from '../components/Contacts';
+import ExperienceCard from '../components/ExperienceCard';
 import Header from '../components/Header';
-import Skills from '../components/Skills';
+import LanguageList from '../components/LanguageList';
+import {
+  ExperienceColumn,
+  Layout,
+  MainColumn,
+  SkillsColumn,
+} from '../components/Layout';
+import List from '../components/ui/List';
+import TagList from '../components/ui/TagList';
 import formatExperience from '../utils/formatExperience';
 
 export default ({ data }) => {
@@ -17,36 +26,64 @@ export default ({ data }) => {
     phone,
     skills,
     langs,
+    socials,
   } = data.bio.frontmatter;
 
-  const educationItems = data.education.frontmatter.items;
-  const confItems = data.confs.frontmatter.items;
+  const educationItems = data.education.frontmatter.items.map(
+    ({ name, city, description, dates }) => ({
+      text: (
+        <React.Fragment>
+          {name} ({city})<br />
+          {description}
+        </React.Fragment>
+      ),
+      additional: dates,
+    })
+  );
+  const confItems = data.confs.frontmatter.items.map(
+    ({ name, description, date }) => ({
+      text: (
+        <React.Fragment>
+          {name}
+          <br />
+          {description}
+        </React.Fragment>
+      ),
+      additional: date,
+    })
+  );
 
-  const experience = data.experience;
+  const experienceList = data.experience.edges || [];
 
   return (
-    <Flex sx={{ height: '100%', overflow: 'hidden' }}>
-      <Box variant="layout.main">
-        <Header name={name} jobTitle={jobTitle} />
-        <Bio
-          about={aboutHtml}
-          educationList={educationItems}
-          confsList={confItems}
-          interests={interests}
-          email={email}
-          phone={phone}
-        />
-      </Box>
-      <Box variant="layout.skills">
-        <Skills skills={skills} langs={langs} />
-      </Box>
-      <Box variant="layout.experience">
-        <Experience experience={formatExperience(experience)} />
-      </Box>
-    </Flex>
+    <Layout>
+      <MainColumn
+        variant="main"
+        header={<Header name={name} jobTitle={jobTitle} />}
+      >
+        <About html={aboutHtml} />
+        <Text variant="lead">EDUCATION</Text>
+        <List items={educationItems} />
+        <Text variant="lead">CONFERENCES & COURSES</Text>
+        <List items={confItems} />
+        <Text variant="lead">INTERESTS</Text>
+        <TagList tags={interests} />
+        <Contacts phone={phone} email={email} {...socials} />
+      </MainColumn>
+      <SkillsColumn>
+        <TagList tags={skills} />
+        <LanguageList languages={langs} />
+      </SkillsColumn>
+      <ExperienceColumn>
+        {experienceList.map((item, index) => (
+          <ExperienceCard {...formatExperience(item)} key={index} />
+        ))}
+      </ExperienceColumn>
+    </Layout>
   );
 };
 
+// eslint-disable-next-line no-undef
 export const query = graphql`
   query {
     confs: markdownRemark(fields: { sourceName: { eq: "confs" } }) {
@@ -78,6 +115,10 @@ export const query = graphql`
         skills
         interests
         langs
+        socials {
+          twitter
+          facebook
+        }
       }
       html
     }
