@@ -124,6 +124,7 @@ export const query = graphql`
     }
     experience: allMarkdownRemark(
       filter: { fields: { sourceName: { eq: "experience" } } }
+      sort: { order: DESC, fields: frontmatter___period }
     ) {
       edges {
         node {

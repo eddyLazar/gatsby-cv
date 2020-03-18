@@ -9,7 +9,7 @@ const ExperienceCard = ({
 }) => {
   const { theme } = useThemeUI();
   return (
-    <Box>
+    <Box mb="large">
       <Text
         sx={{ color: 'gray3', fontStyle: 'italic', mb: 'medium' }}
         variant="heading"
@@ -28,6 +28,10 @@ const ExperienceCard = ({
           '& > p': {
             ...theme.text.paragraph,
             color: 'white',
+          },
+          '& a': {
+            ...theme.text.paragraph,
+            color: 'inherit!important',
           },
         }}
       />

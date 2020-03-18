@@ -110,7 +110,7 @@ const theme = {
       fontWeight: 'body',
     },
     a: {
-      color: 'text',
+      color: 'inherit!important',
     },
     h1: {
       variant: 'text.heading',
