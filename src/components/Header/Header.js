@@ -1,19 +1,28 @@
 import React from 'react';
-import { Box, Flex, Text, useColorMode } from 'theme-ui';
+import { Box, Flex, Text, useColorMode, useThemeUI } from 'theme-ui';
+import { HeroImage } from '../HeroImage/HeroImage';
 import ThemeToggle from '../ui/ThemeToggle';
 
-const Header = ({ name = '', jobTitle = '' }) => {
+const Header = ({ jobTitle = '' }) => {
   const [colorMode, setColorMode] = useColorMode();
+  const { theme } = useThemeUI();
+
   return (
-    <Box bg="primary" padding="medium">
-      <Flex sx={{ justifyContent: 'space-between', alignItems: 'flex-start' }}>
-        <Box>
+    <Box>
+      <Flex
+        bg="primary"
+        padding="medium"
+        sx={{ justifyContent: 'flex-start', alignItems: 'flex-start' }}
+      >
+        <Box sx={{ width: `${theme.space.x * 13}vw` }}>
           <Text variant="heading" mb="medium">
             Eduard
             <br />
             Lazarenko
           </Text>
-          <Text variant="p">{jobTitle}</Text>
+          <Text variant="p" mb="medium">
+            {jobTitle}
+          </Text>
         </Box>
         <ThemeToggle
           onClick={e => {
@@ -21,6 +30,7 @@ const Header = ({ name = '', jobTitle = '' }) => {
           }}
         />
       </Flex>
+      <HeroImage />
     </Box>
   );
 };

@@ -7,12 +7,15 @@ interests:
   - windsurfing
   - hiking
   - yoga
+  - travel
+  - marshal arts
+  - podcasts
+  - storytelling
   - mother nature
+  - meditation
   - water sports
   - healthy food
-  - marshal arts
   - cooking
-  - travel
 skills:
   - js
   - node

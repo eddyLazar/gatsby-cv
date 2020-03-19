@@ -1,7 +1,7 @@
 ---
 period: 2017–2018
 title: senior fullstack developer
-company: TRUCKNET LTD
+company: trucknet ltd
 ---
 
 Responsible for company backend development using nodejs and mongodb. We also worked on implementing microsevices architecture using typescipt for new projects.

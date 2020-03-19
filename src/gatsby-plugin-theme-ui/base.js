@@ -33,6 +33,7 @@ const space = [0, 4, 8, 16, 32, 64, 128, 256, 512];
 space.small = '0.6944vw'; // 10
 space.medium = '2.0833vw'; // 30
 space.large = '4.166vw'; // 60
+space.x = 2.0833;
 
 const lineHeight = {
   small: '1.388vw', // min 17
@@ -62,7 +63,7 @@ const theme = {
   colors: {
     ...colors,
     modes: {
-      dark: darkColors,
+      dark: { ...darkColors, black: '#fff' },
     },
   },
   text: {
