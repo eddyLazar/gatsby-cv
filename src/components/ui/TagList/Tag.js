@@ -9,7 +9,7 @@ const Tag = ({ children }) => {
     <Box
       sx={{
         color: theme.colors.tag,
-        borderRadius: 20,
+        borderRadius: '1vw',
         backgroundColor: theme.colors.black,
         padding: '5px 17px',
         fontSize: ['17px', '17px', '17px', 'medium'],

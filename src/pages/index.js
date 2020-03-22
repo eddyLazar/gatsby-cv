@@ -27,6 +27,7 @@ export default ({ data }) => {
     skills,
     langs,
     socials,
+    softSkills = [],
   } = data.bio.frontmatter;
 
   const educationItems = data.education.frontmatter.items.map(
@@ -73,6 +74,8 @@ export default ({ data }) => {
       <SkillsColumn>
         <TagList tags={skills} />
         <LanguageList languages={langs} />
+        <Text variant="lead">SOFT SKILLS</Text>
+        <TagList tags={softSkills} />
       </SkillsColumn>
       <ExperienceColumn>
         {experienceList.map((item, index) => (
@@ -113,6 +116,7 @@ export const query = graphql`
         email
         phone
         skills
+        softSkills
         interests
         langs
         socials {

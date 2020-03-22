@@ -40,6 +40,17 @@ skills:
   - SOLID
   - CI/CD
   - AWS
+  - JAMstack
+softSkills:
+  - problem solving
+  - effective communication
+  - feedback giving
+  - open-mindedness
+  - creativity
+  - stress resistance
+  - integrity
+  - flexibility
+  - tolerance
 langs:
   - Russian — native
   - English — fluent
