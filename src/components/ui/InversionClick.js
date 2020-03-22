@@ -7,7 +7,8 @@ const InversionClick = ({ children = null }) => {
   const [coords, setCoords] = React.useState();
 
   const handleClick = e => {
-    setCoords([e.clientX, e.clientY]);
+    // setCoords([e.clientX, e.clientY]);
+    setCoords([e.pageX, e.pageY]);
   };
   return (
     <Box

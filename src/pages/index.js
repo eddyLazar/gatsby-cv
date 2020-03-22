@@ -11,7 +11,7 @@ import {
   MainColumn,
   SkillsColumn,
 } from '../components/Layout';
-import InversionClick from '../components/ui/InversionClick';
+import SEO from '../components/seo';
 import List from '../components/ui/List';
 import TagList from '../components/ui/TagList';
 import formatExperience from '../utils/formatExperience';
@@ -58,34 +58,33 @@ export default ({ data }) => {
   const experienceList = data.experience.edges || [];
 
   return (
-    <InversionClick>
-      <Layout>
-        <MainColumn
-          variant="main"
-          header={<Header name={name} jobTitle={jobTitle} />}
-        >
-          <About html={aboutHtml} />
-          <Text variant="lead">EDUCATION</Text>
-          <List items={educationItems} />
-          <Text variant="lead">CONFERENCES & COURSES</Text>
-          <List items={confItems} />
-          <Text variant="lead">INTERESTS</Text>
-          <TagList tags={interests} />
-          <Contacts phone={phone} email={email} {...socials} />
-        </MainColumn>
-        <SkillsColumn>
-          <TagList tags={skills} />
-          <LanguageList languages={langs} />
-          <Text variant="lead">SOFT SKILLS</Text>
-          <TagList tags={softSkills} />
-        </SkillsColumn>
-        <ExperienceColumn>
-          {experienceList.map((item, index) => (
-            <ExperienceCard {...formatExperience(item)} key={index} />
-          ))}
-        </ExperienceColumn>
-      </Layout>
-    </InversionClick>
+    <Layout>
+      <SEO />
+      <MainColumn
+        variant="main"
+        header={<Header name={name} jobTitle={jobTitle} />}
+      >
+        <About html={aboutHtml} />
+        <Text variant="lead">EDUCATION</Text>
+        <List items={educationItems} />
+        <Text variant="lead">CONFERENCES & COURSES</Text>
+        <List items={confItems} />
+        <Text variant="lead">INTERESTS</Text>
+        <TagList tags={interests} />
+        <Contacts phone={phone} email={email} {...socials} />
+      </MainColumn>
+      <SkillsColumn>
+        <TagList tags={skills} />
+        <LanguageList languages={langs} />
+        <Text variant="lead">SOFT SKILLS</Text>
+        <TagList tags={softSkills} />
+      </SkillsColumn>
+      <ExperienceColumn>
+        {experienceList.map((item, index) => (
+          <ExperienceCard {...formatExperience(item)} key={index} />
+        ))}
+      </ExperienceColumn>
+    </Layout>
   );
 };
 

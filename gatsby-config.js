@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `CV website`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Eddy Lazar CV`,
+    description: `Eddy Lazar CV website powered by gatsby.`,
     author: `hello@eddylazar.com`,
   },
   plugins: [
@@ -64,7 +64,7 @@ module.exports = {
         background_color: '#D3D1CA',
         theme_color: '#D3D1CA',
         display: `minimal-ui`,
-        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon/favicon-32x32.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
