@@ -4,6 +4,7 @@ import Tag from './Tag';
 
 const TagList = ({ tags = [''] }) => (
   <Box marginBottom="large">
+    <div />
     {tags.map(tag => (
       <Box
         key={tag}
