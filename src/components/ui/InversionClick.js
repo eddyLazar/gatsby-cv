@@ -1,30 +1,29 @@
 // background: white;
 import React from 'react';
 import { animated, useSpring } from 'react-spring';
+import { Box } from 'theme-ui';
 
 const InversionClick = ({ children = null }) => {
   const [coords, setCoords] = React.useState();
 
   const handleClick = e => {
-    // console.log(e);
-    // console.log(e.pageX);
-
     setCoords([e.clientX, e.clientY]);
   };
   return (
-    <div
+    <Box
       onClick={handleClick}
-      style={{ height: '100%', maxHeight: '100%', overflow: 'hidden' }}
+      sx={{
+        height: ['initial', 'initial', '100%'],
+        overflow: ['scroll', 'scroll', 'hidden'],
+      }}
     >
       {coords && <Buble x={coords[0]} y={coords[1]} />}
       {children}
-    </div>
+    </Box>
   );
 };
 
 const bubleLength = 100;
-
-const square = x => ({ width: x, height: x });
 
 const Buble = ({ x, y }) => {
   const props = useSpring({
@@ -53,4 +52,3 @@ const Buble = ({ x, y }) => {
 };
 
 export default InversionClick;
-// mix-blend-mode: difference;
