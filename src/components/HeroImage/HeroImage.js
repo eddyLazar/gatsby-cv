@@ -8,13 +8,15 @@ export const HeroImage = ({ html }) => {
   const imageSrc = colorMode === 'dark' ? unionBlackSrc : unionSrc;
   const { theme } = useThemeUI();
 
-  console.log(theme.colors.black);
-
   return (
     <Box
       sx={{
         width: '100%',
-        height: `${theme.space.x * 8.5}vw`,
+        height: [
+          `${theme.space.x * 8.5 * 2}vw`,
+          `${theme.space.x * 8.5 * 2}vw`,
+          `${theme.space.x * 8.5}vw`,
+        ],
         bg: theme.colors.black,
         position: 'relative',
       }}

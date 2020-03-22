@@ -4,7 +4,10 @@ import lunaSrc from './luna.svg';
 
 const ThemeToggle = ({ onClick = () => {} }) => {
   return (
-    <Flex sx={{ alignItems: 'center', cursor: 'pointer' }} onClick={onClick}>
+    <Flex
+      sx={{ alignItems: 'center', cursor: 'pointer', zIndex: 1 }}
+      onClick={onClick}
+    >
       <img src={lunaSrc} alt="" />
       <Text
         color="#fff"

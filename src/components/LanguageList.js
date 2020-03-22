@@ -4,7 +4,7 @@ import { Text } from 'theme-ui';
 const LanguageList = ({ languages = [''] }) => (
   <React.Fragment>
     <Text variant="lead">SPOKEN LANGUAGES</Text>
-    <Text variant="lead">
+    <Text variant="lead" marginBottom="large">
       {languages.map((lang, i) => (
         <span key={i}>
           {lang}

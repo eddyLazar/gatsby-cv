@@ -1,5 +1,5 @@
 ---
-period: '2019'
+period: 2019-2019
 title: Senior Frontend Developer
 company: tapmod.studio
 ---

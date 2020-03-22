@@ -11,36 +11,38 @@ const Bio = ({
   twitter = '',
   youtube = '',
 }) => (
-  <Box>
+  <Box mb="medium">
     <Text variant="lead">CONTACTS</Text>
     <Text variant="lead">
       <Link href={`mailto:${email}`}>{email}</Link>
       <br />
       <Link href={`tel:${phone}`}>{phone}</Link>
     </Text>
-    <Flex sx={{ '& > div': { mr: '10px' } }}>
+    <Flex>
       {facebook && (
-        <Box>
-          <Link href={facebook} target="_blank">
-            <img src={facebookSrc} alt="facebook" />
-          </Link>
-        </Box>
+        <Link sx={iconBoxStyle} href={facebook} target="_blank">
+          <img src={facebookSrc} alt="facebook" />
+        </Link>
       )}
       {twitter && (
-        <Box>
-          <Link href={twitter} target="_blank">
-            <img src={twitterSrc} alt="twitter" />
-          </Link>
-        </Box>
+        <Link sx={iconBoxStyle} href={twitter} target="_blank">
+          <img src={twitterSrc} alt="twitter" />
+        </Link>
       )}
       {youtube && (
-        <Box>
-          <Link href={youtube} target="_blank">
-            <img src={youtubeSrc} alt="youtube" />
-          </Link>
-        </Box>
+        <Link sx={iconBoxStyle} href={youtube} target="_blank">
+          <img src={youtubeSrc} alt="youtube" />
+        </Link>
       )}
     </Flex>
   </Box>
 );
+
+const iconBoxStyle = {
+  width: 30,
+  height: 30,
+  display: 'block',
+  marginRight: 10,
+};
+
 export default Bio;
