@@ -11,7 +11,7 @@ const Tag = ({ children }) => {
         color: theme.colors.tag,
         borderRadius: ['20px', '20px', '1vw'],
         backgroundColor: theme.colors.black,
-        padding: '5px 17px',
+        padding: '7px 17px 5px 17px',
         fontSize: ['17px', '17px', '17px', 'medium'],
         lineHeight: ['17px', '17px', '17px', theme.fontSizes.medium],
         display: 'inline-block',

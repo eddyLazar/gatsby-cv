@@ -5,7 +5,6 @@ import { Box, useThemeUI } from 'theme-ui';
 const InversionClick = ({ children = null }) => {
   const [coords, setCoords] = React.useState();
   const [isBubbleVisible, setIsBubbleVisible] = React.useState(false);
-  const timerRef = React.useRef();
 
   const showBubble = () => setIsBubbleVisible(true);
   const hideBubble = () => setIsBubbleVisible(false);
@@ -14,24 +13,11 @@ const InversionClick = ({ children = null }) => {
     setCoords([e.pageX, e.pageY]);
   };
 
-  const animationMs = 1000;
-
-  React.useEffect(() => {
-    let timerId = null;
-
-    if (isBubbleVisible) {
-      if (!!timerRef.current) {
-        clearTimeout(timerRef.current);
-      }
-      timerRef.current = setTimeout(hideBubble, animationMs);
-    }
-    return () => clearTimeout(timerId);
-  }, [isBubbleVisible]);
-
   return (
     <Box
       onMouseMove={handleMove}
-      onClick={showBubble}
+      onMouseDown={showBubble}
+      onMouseUp={hideBubble}
       sx={{
         height: ['initial', 'initial', '100%'],
         overflow: ['scroll', 'scroll', 'hidden'],
