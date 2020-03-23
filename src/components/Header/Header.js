@@ -15,7 +15,7 @@ const Header = ({ jobTitle = '' }) => {
         sx={{ justifyContent: 'flex-start', alignItems: 'flex-start' }}
       >
         <Box sx={{ width: ['50%', '50%', `${theme.space.x * 13}vw`] }}>
-          <Text variant="heading" mb="medium">
+          <Text variant="heading" mb="small">
             Eduard
             <br />
             Lazarenko

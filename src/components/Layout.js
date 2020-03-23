@@ -17,7 +17,9 @@ export const Layout = ({ children }) => (
 );
 
 export const MainColumn = ({ children, header = null }) => (
-  <Box sx={{ width: ['100%', '100%', '50%'], ...columnStyle, p: 0 }}>
+  <Box
+    sx={{ width: ['100%', '100%', '50%'], ...columnStyle, p: 0, bg: 'white' }}
+  >
     {header}
     <Box p="medium">{children}</Box>
   </Box>

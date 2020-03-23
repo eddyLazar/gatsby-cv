@@ -8,7 +8,8 @@ fontSizes.large = '2.4vw'; // min: 29
 const colorPalette = {
   black: '#212121',
   white: '#FFFFFF',
-  gray1: '#EBEBEB',
+  // gray1: '#EBEBEB',
+  gray1: '#E6E6E6',
   gray2: '#CDCBC3',
   gray3: '#CCCCCC',
   gray4: '#505050',

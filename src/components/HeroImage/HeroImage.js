@@ -1,11 +1,8 @@
 import React from 'react';
-import { Box, Image, useColorMode, useThemeUI } from 'theme-ui';
-import unionSrc from './union.svg';
-import unionBlackSrc from './union_black.svg';
+import { Box, useThemeUI } from 'theme-ui';
+import SailImage from './sail.inline.svg';
 
 export const HeroImage = ({ html }) => {
-  const [colorMode] = useColorMode();
-  const imageSrc = colorMode === 'dark' ? unionBlackSrc : unionSrc;
   const { theme } = useThemeUI();
 
   return (
@@ -19,17 +16,16 @@ export const HeroImage = ({ html }) => {
         ],
         bg: theme.colors.black,
         position: 'relative',
+        '& svg path': {
+          fill: 'white',
+        },
       }}
     >
-      <Image
-        src={imageSrc}
-        alt="picture inspired by surfing"
-        sx={{
-          width: '110%',
-          maxWidth: 'none',
+      <SailImage
+        style={{
+          width: '100%',
           position: 'absolute',
-          bottom: -1,
-          right: 0,
+          bottom: 0,
         }}
       />
     </Box>
