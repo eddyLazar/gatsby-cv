@@ -5,6 +5,7 @@ import { Box, useThemeUI } from 'theme-ui';
 const InversionClick = ({ children = null }) => {
   const [coords, setCoords] = React.useState();
   const [isBubbleVisible, setIsBubbleVisible] = React.useState(false);
+  const timerRef = React.useRef();
 
   const showBubble = () => setIsBubbleVisible(true);
   const hideBubble = () => setIsBubbleVisible(false);
@@ -19,7 +20,10 @@ const InversionClick = ({ children = null }) => {
     let timerId = null;
 
     if (isBubbleVisible) {
-      setTimeout(hideBubble, animationMs);
+      if (!!timerRef.current) {
+        clearTimeout(timerRef.current);
+      }
+      timerRef.current = setTimeout(hideBubble, animationMs);
     }
     return () => clearTimeout(timerId);
   }, [isBubbleVisible]);

@@ -37,10 +37,10 @@ skills:
   - serverless
   - functional programming
   - microservices
-  - SOLID
-  - CI/CD
-  - AWS
-  - JAMstack
+  - solid
+  - ci/cd
+  - aws
+  - jamstack
 softSkills:
   - problem solving
   - effective communication
