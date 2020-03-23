@@ -1,19 +1,17 @@
 import React from 'react';
 import { Box, Flex, Text } from 'theme-ui';
-import InversionClick from './ui/InversionClick';
+// import InversionClick from './ui/InversionClick';
 
 export const Layout = ({ children }) => (
-  <InversionClick>
-    <Flex
-      sx={{
-        height: ['initial', 'initial', '100%'],
-        overflow: ['scroll', 'scroll', 'hidden'],
-        flexDirection: ['column', 'column', 'row'],
-      }}
-    >
-      {children}
-    </Flex>
-  </InversionClick>
+  <Flex
+    sx={{
+      height: ['initial', 'initial', '100%'],
+      overflow: ['scroll', 'scroll', 'hidden'],
+      flexDirection: ['column', 'column', 'row'],
+    }}
+  >
+    {children}
+  </Flex>
 );
 
 export const MainColumn = ({ children, header = null }) => (
