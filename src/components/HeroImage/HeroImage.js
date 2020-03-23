@@ -25,7 +25,8 @@ export const HeroImage = ({ html }) => {
         style={{
           width: '100%',
           position: 'absolute',
-          bottom: 0,
+          bottom: -1,
+          height: 'auto',
         }}
       />
     </Box>

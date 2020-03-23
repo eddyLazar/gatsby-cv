@@ -1,3 +1,5 @@
+// width="720" height="405" viewBox="0 0 720 405"
+
 module.exports = {
   siteMetadata: {
     title: `Eddy Lazarenko CV`,
