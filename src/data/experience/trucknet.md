@@ -1,6 +1,6 @@
 ---
 period: 2017–2018
-title: senior fullstack developer
+title: Senior fullstack developer
 company: trucknet ltd
 ---
 

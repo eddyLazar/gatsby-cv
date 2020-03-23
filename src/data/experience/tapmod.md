@@ -4,6 +4,4 @@ title: Senior Frontend Developer
 company: tapmod.studio
 ---
 
-Worked on intergration of 3d models from [sketchfab](https://sketchfab.com/) with web interfaces on React.
-
-We had a lot of small web projects with 3d integrations I was responsible for building a workflow and tools(js library, react components) to optimize these projects lifecycle for me and the rest of the team.
+Developing intergration of 3d models from [sketchfab](https://sketchfab.com/) with web interfaces on React. Worked on several projects for this company and then started to work on building workflows and tools(js library, react components) to optimize projects lifecycle for other developers working on those projects.
