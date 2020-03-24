@@ -54,7 +54,7 @@ function SEO({ description = '', lang = '', meta = '', title = '' }) {
         },
         {
           property: `og:image`,
-          content: '/meta_image.png',
+          content: 'https://eddylazar.com/meta_image.png',
         },
         {
           property: `og:type`,
