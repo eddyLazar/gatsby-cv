@@ -1,15 +1,16 @@
 /** @jsx jsx */
-import { Button, jsx, Text } from 'theme-ui';
+import { jsx, Link, Text } from 'theme-ui';
 import lunaSrc from './luna.svg';
 
 const ThemeToggle = ({ onClick = () => {} }) => {
   return (
-    <Button
+    <Link
       sx={{
         display: 'flex',
         alignItems: 'center',
         cursor: 'pointer',
         zIndex: 1,
+        backgroundColor: 'none',
       }}
       onClick={onClick}
     >
@@ -26,7 +27,7 @@ const ThemeToggle = ({ onClick = () => {} }) => {
       >
         night mode
       </Text>
-    </Button>
+    </Link>
   );
 };
 

@@ -39,6 +39,18 @@ const InversionClick = ({ children = null }) => {
         ) {
           return setIsOverText(true);
         }
+        if (
+          e.target.localName === 'h1' ||
+          e.target.parentElement.localName === 'h1'
+        ) {
+          return setIsOverText(true);
+        }
+        if (
+          e.target.localName === 'h2' ||
+          e.target.parentElement.localName === 'h2'
+        ) {
+          return setIsOverText(true);
+        }
         return setIsOverText(false);
       }}
       onMouseMove={handleMove}
@@ -49,7 +61,9 @@ const InversionClick = ({ children = null }) => {
         overflow: ['scroll', 'scroll', 'hidden'],
       }}
     >
-      {!isOverText && isBubbleVisible && <Bubble x={coords[0]} y={coords[1]} />}
+      {coords && !isOverText && isBubbleVisible && (
+        <Bubble x={coords[0]} y={coords[1]} />
+      )}
       {children}
     </Box>
   );
@@ -63,6 +77,7 @@ const Bubble = ({ x, y, isVisible = false }) => {
   return (
     <Box
       style={{
+        display: ['none', 'none', 'block', 'block'],
         width: `${bubleLength}vw`,
         height: `${bubleLength}vw`,
         borderRadius: `${bubleLength / 2}vw`,

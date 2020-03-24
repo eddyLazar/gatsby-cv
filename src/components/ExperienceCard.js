@@ -11,15 +11,16 @@ const ExperienceCard = ({
   return (
     <Box mb="large">
       <Text
+        as="p"
         sx={{ color: 'gray3', fontStyle: 'italic', mb: 'medium' }}
         variant="heading"
       >
         {period}
       </Text>
-      <Text color="white" m={0} variant="lead">
+      <Text color="white" m={0} variant="lead" as="p">
         {title}
       </Text>
-      <Text color="gray4" variant="lead">
+      <Text color="gray4" variant="lead" as="p">
         {company}
       </Text>
       <div

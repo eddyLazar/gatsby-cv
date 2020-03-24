@@ -33,7 +33,7 @@ export const SkillsColumn = ({ children }) => (
       ...columnStyle,
     }}
   >
-    <Text variant="heading" color="gray2">
+    <Text variant="heading" color="gray2" as="h2">
       skills
     </Text>
     {children}
@@ -48,7 +48,7 @@ export const ExperienceColumn = ({ children }) => (
       ...columnStyle,
     }}
   >
-    <Text variant="heading" color="gray4">
+    <Text variant="heading" color="gray4" as="h2">
       experience
     </Text>
     {children}

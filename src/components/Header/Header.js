@@ -14,13 +14,15 @@ const Header = ({ jobTitle = '' }) => {
         padding="medium"
         sx={{ justifyContent: 'flex-start', alignItems: 'flex-start' }}
       >
-        <Box sx={{ width: ['50%', '50%', `${theme.space.x * 13}vw`] }}>
-          <Text variant="heading" mb="small">
+        <Box
+          sx={{ width: ['50%', '50%', `${theme.space.x * 13}vw`], zIndex: 1 }}
+        >
+          <Text variant="heading" mb="small" as="h1" sx={{ zIndex: 1 }}>
             Eduard
             <br />
             Lazarenko
           </Text>
-          <Text variant="p" mb="medium">
+          <Text variant="p" mb="medium" sx={{ zIndex: 1 }} as="p">
             {jobTitle}
           </Text>
         </Box>

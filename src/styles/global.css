@@ -18,7 +18,11 @@ p {
   margin-bottom: 24px;
 }
 
-p::selection {
-  background-color: #0029ff;
+p::selection,
+a::selection,
+h1::selection,
+h2::selection,
+h3::selection {
+  background-color: #0029ff !important;
   color: white;
 }

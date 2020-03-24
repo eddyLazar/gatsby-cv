@@ -65,18 +65,26 @@ export default ({ data }) => {
         header={<Header name={name} jobTitle={jobTitle} />}
       >
         <About html={aboutHtml} />
-        <Text variant="lead">EDUCATION</Text>
+        <Text variant="lead" as="p">
+          EDUCATION
+        </Text>
         <List items={educationItems} />
-        <Text variant="lead">CONFERENCES & COURSES</Text>
+        <Text variant="lead" as="p">
+          CONFERENCES & COURSES
+        </Text>
         <List items={confItems} />
-        <Text variant="lead">INTERESTS</Text>
+        <Text as="p" variant="lead">
+          INTERESTS
+        </Text>
         <TagList tags={interests} />
         <Contacts phone={phone} email={email} {...socials} />
       </MainColumn>
       <SkillsColumn>
         <TagList tags={skills} />
         <LanguageList languages={langs} />
-        <Text variant="lead">SOFT SKILLS</Text>
+        <Text variant="lead" as="p">
+          SOFT SKILLS
+        </Text>
         <TagList tags={softSkills} />
       </SkillsColumn>
       <ExperienceColumn>

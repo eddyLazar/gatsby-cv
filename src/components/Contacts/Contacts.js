@@ -12,8 +12,10 @@ const Bio = ({
   youtube = '',
 }) => (
   <Box mb="medium">
-    <Text variant="lead">CONTACTS</Text>
-    <Text variant="lead">
+    <Text variant="lead" as="p">
+      CONTACTS
+    </Text>
+    <Text variant="lead" as="p">
       <Link href={`mailto:${email}`}>{email}</Link>
       <br />
       <Link href={`tel:${phone}`}>{phone}</Link>

@@ -7,6 +7,7 @@ const Tag = ({ children }) => {
 
   return (
     <Box
+      as="p"
       sx={{
         color: theme.colors.tag,
         borderRadius: ['20px', '20px', '1vw'],
