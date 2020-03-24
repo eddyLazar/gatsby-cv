@@ -5,8 +5,11 @@ import { Box, useThemeUI } from 'theme-ui';
 const InversionClick = ({ children = null }) => {
   const [coords, setCoords] = React.useState();
   const [isBubbleVisible, setIsBubbleVisible] = React.useState(false);
+  const [isOverText, setIsOverText] = React.useState(false);
 
-  const showBubble = () => setIsBubbleVisible(true);
+  const showBubble = e => {
+    setIsBubbleVisible(true);
+  };
   const hideBubble = () => setIsBubbleVisible(false);
 
   const handleMove = e => {
@@ -15,6 +18,29 @@ const InversionClick = ({ children = null }) => {
 
   return (
     <Box
+      onMouseOver={e => {
+        console.log();
+
+        if (
+          e.target.localName === 'p' ||
+          e.target.parentElement.localName === 'p'
+        ) {
+          return setIsOverText(true);
+        }
+        if (
+          e.target.localName === 'a' ||
+          e.target.parentElement.localName === 'a'
+        ) {
+          return setIsOverText(true);
+        }
+        if (
+          e.target.localName === 'button' ||
+          e.target.parentElement.localName === 'button'
+        ) {
+          return setIsOverText(true);
+        }
+        return setIsOverText(false);
+      }}
       onMouseMove={handleMove}
       onMouseDown={showBubble}
       onMouseUp={hideBubble}
@@ -23,7 +49,7 @@ const InversionClick = ({ children = null }) => {
         overflow: ['scroll', 'scroll', 'hidden'],
       }}
     >
-      {isBubbleVisible && <Bubble x={coords[0]} y={coords[1]} />}
+      {!isOverText && isBubbleVisible && <Bubble x={coords[0]} y={coords[1]} />}
       {children}
     </Box>
   );

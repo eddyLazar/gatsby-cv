@@ -17,3 +17,8 @@ p {
   margin: 0;
   margin-bottom: 24px;
 }
+
+p::selection {
+  background-color: #0029ff;
+  color: white;
+}
