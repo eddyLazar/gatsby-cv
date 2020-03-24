@@ -38,7 +38,7 @@ function SEO({ description = '', lang = '', meta = '', title = '' }) {
         lang,
       }}
       title={metaTitle}
-      titleTemplate={`%s | Software Engineer`}
+      titleTemplate={`%s`}
       meta={[
         {
           name: `description`,
