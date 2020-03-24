@@ -6,6 +6,7 @@ body,
 
 body {
   margin: 0px;
+  overflow: scroll;
 }
 
 div[role='group'][tabindex] {
