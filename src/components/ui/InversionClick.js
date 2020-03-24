@@ -19,8 +19,6 @@ const InversionClick = ({ children = null }) => {
   return (
     <Box
       onMouseOver={e => {
-        console.log();
-
         if (
           e.target.localName === 'p' ||
           e.target.parentElement.localName === 'p'
