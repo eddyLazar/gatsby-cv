@@ -27,6 +27,9 @@ function SEO({ description = '', lang = '', meta = '', title = '' }) {
   );
 
   const metaDescription = description || site.siteMetadata.description;
+  const metaTitle = title || site.siteMetadata.title;
+  console.log(metaTitle);
+
   const { theme } = useThemeUI();
 
   return (
@@ -34,8 +37,8 @@ function SEO({ description = '', lang = '', meta = '', title = '' }) {
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title={metaTitle}
+      titleTemplate={`%s | Software Engineer`}
       meta={[
         {
           name: `description`,
@@ -43,11 +46,15 @@ function SEO({ description = '', lang = '', meta = '', title = '' }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           property: `og:description`,
           content: metaDescription,
+        },
+        {
+          property: `og:image`,
+          content: '/meta_image.png',
         },
         {
           property: `og:type`,
@@ -63,7 +70,7 @@ function SEO({ description = '', lang = '', meta = '', title = '' }) {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           name: `twitter:description`,
