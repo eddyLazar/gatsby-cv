@@ -27,6 +27,7 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-typography": "^0.16.19",
+    "react-use": "^13.27.0",
     "the-platform": "^0.10.1",
     "theme-ui": "^0.3.1",
     "typography": "^0.16.19",

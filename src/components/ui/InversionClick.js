@@ -74,7 +74,7 @@ const Bubble = ({ x, y, isVisible = false }) => {
 
   return (
     <Box
-      style={{
+      sx={{
         display: ['none', 'none', 'block', 'block'],
         width: `${bubleLength}vw`,
         height: `${bubleLength}vw`,
