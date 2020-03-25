@@ -28,7 +28,6 @@ function SEO({ description = '', lang = '', meta = '', title = '' }) {
 
   const metaDescription = description || site.siteMetadata.description;
   const metaTitle = title || site.siteMetadata.title;
-  console.log(metaTitle);
 
   const { theme } = useThemeUI();
 

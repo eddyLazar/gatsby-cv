@@ -84,7 +84,7 @@ const theme = {
     },
     lead: {
       marginBottom: 'medium',
-      fontSize: ['17px', '17px', '17px', 'medium'],
+      fontSize: ['18px', '18px', '18px', 'medium'],
       lineHeight: ['21.25px', '21.25px', '21.25px', lineHeight.medium],
     },
   },
