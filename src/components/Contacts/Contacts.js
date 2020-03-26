@@ -1,6 +1,8 @@
 import React from 'react';
 import { Box, Flex, Link, Text } from 'theme-ui';
 import facebookSrc from './facebook.svg';
+import instaSrc from './insta.svg';
+import linkedinSrc from './linkedin.svg';
 import twitterSrc from './twitter.svg';
 import youtubeSrc from './youtube.svg';
 
@@ -10,6 +12,8 @@ const Bio = ({
   facebook = '',
   twitter = '',
   youtube = '',
+  instagram = '',
+  linkedin = '',
 }) => (
   <Box mb="medium">
     <Text variant="lead" as="p">
@@ -34,6 +38,16 @@ const Bio = ({
       {youtube && (
         <Link sx={iconBoxStyle} href={youtube} target="_blank">
           <img src={youtubeSrc} alt="youtube" />
+        </Link>
+      )}
+      {instagram && (
+        <Link sx={iconBoxStyle} href={instagram} target="_blank">
+          <img src={instaSrc} alt="youtube" />
+        </Link>
+      )}
+      {linkedin && (
+        <Link sx={iconBoxStyle} href={linkedin} target="_blank">
+          <img src={linkedinSrc} alt="youtube" />
         </Link>
       )}
     </Flex>

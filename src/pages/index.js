@@ -132,6 +132,8 @@ export const query = graphql`
         socials {
           twitter
           facebook
+          instagram
+          linkedin
         }
       }
       html
