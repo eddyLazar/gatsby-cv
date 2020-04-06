@@ -86,6 +86,7 @@ const theme = {
       marginBottom: 'medium',
       fontSize: ['18px', '18px', '18px', 'medium'],
       lineHeight: ['21.25px', '21.25px', '21.25px', lineHeight.medium],
+      width: 'max-content',
     },
   },
   layout: {
@@ -130,6 +131,7 @@ const theme = {
     p: {
       fontSize: 'small',
       marginBottom: 'medium',
+      width: 'max-content',
     },
     th: {
       textAlign: 'left',
