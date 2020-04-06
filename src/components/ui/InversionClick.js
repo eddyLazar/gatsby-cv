@@ -20,35 +20,12 @@ const InversionClick = ({ children = null }) => {
     <Box
       onMouseOver={e => {
         if (
-          e.target.localName === 'p' ||
-          e.target.parentElement.localName === 'p'
+          isTagFunctional(e.target.localName) ||
+          isTagFunctional(e.target.parentElement.localName)
         ) {
           return setIsOverText(true);
         }
-        if (
-          e.target.localName === 'a' ||
-          e.target.parentElement.localName === 'a'
-        ) {
-          return setIsOverText(true);
-        }
-        if (
-          e.target.localName === 'button' ||
-          e.target.parentElement.localName === 'button'
-        ) {
-          return setIsOverText(true);
-        }
-        if (
-          e.target.localName === 'h1' ||
-          e.target.parentElement.localName === 'h1'
-        ) {
-          return setIsOverText(true);
-        }
-        if (
-          e.target.localName === 'h2' ||
-          e.target.parentElement.localName === 'h2'
-        ) {
-          return setIsOverText(true);
-        }
+
         return setIsOverText(false);
       }}
       onMouseMove={handleMove}
@@ -67,8 +44,8 @@ const InversionClick = ({ children = null }) => {
   );
 };
 
-const Bubble = ({ x, y, isVisible = false }) => {
-  const { theme } = useThemeUI();
+const Bubble = ({ x, y }) => {
+  const { theme, colorMode } = useThemeUI();
 
   const bubleLength = 7 * theme.space.x;
 
@@ -82,7 +59,7 @@ const Bubble = ({ x, y, isVisible = false }) => {
         position: 'absolute',
         left: `calc(${x}px - ${bubleLength / 2}vw)`,
         top: `calc(${y}px - ${bubleLength / 2}vw)`,
-        backgroundColor: 'white',
+        backgroundColor: colorMode === 'dark' ? 'black' : 'white',
         zIndex: 9999,
         mixBlendMode: 'difference',
       }}
@@ -91,3 +68,18 @@ const Bubble = ({ x, y, isVisible = false }) => {
 };
 
 export default InversionClick;
+
+const isTagFunctional = tagLocalename => {
+  const functionalTags = [
+    'p',
+    'a',
+    'button',
+    'h1',
+    'h2',
+    'h3',
+    'h4',
+    'h5',
+    'h6',
+  ];
+  return functionalTags.includes(tagLocalename);
+};
