@@ -16,10 +16,10 @@ const Bio = ({
   linkedin = '',
 }) => (
   <Box mb="medium">
-    <Text variant="lead" as="p">
+    <Text variant="lead" as="p" sx={{ width: 'max-content' }}>
       CONTACTS
     </Text>
-    <Text variant="lead" as="p">
+    <Text variant="lead" as="p" sx={{ width: 'max-content' }}>
       <Link href={`mailto:${email}`}>{email}</Link>
       <br />
       <Link href={`tel:${phone}`}>{phone}</Link>

@@ -65,15 +65,15 @@ export default ({ data }) => {
         header={<Header name={name} jobTitle={jobTitle} />}
       >
         <About html={aboutHtml} />
-        <Text variant="lead" as="p">
+        <Text variant="lead" as="p" sx={{ width: 'max-content' }}>
           EDUCATION
         </Text>
         <List items={educationItems} />
-        <Text variant="lead" as="p">
+        <Text variant="lead" as="p" sx={{ width: 'max-content' }}>
           CONFERENCES & COURSES
         </Text>
         <List items={confItems} />
-        <Text as="p" variant="lead">
+        <Text as="p" variant="lead" sx={{ width: 'max-content' }}>
           INTERESTS
         </Text>
         <TagList tags={interests} />
@@ -82,7 +82,7 @@ export default ({ data }) => {
       <SkillsColumn>
         <TagList tags={skills} />
         <LanguageList languages={langs} />
-        <Text variant="lead" as="p">
+        <Text variant="lead" as="p" sx={{ width: 'max-content' }}>
           SOFT SKILLS
         </Text>
         <TagList tags={softSkills} />
