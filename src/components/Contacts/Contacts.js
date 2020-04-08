@@ -1,11 +1,12 @@
 import React from 'react';
 import { Box, Flex, Link, Text } from 'theme-ui';
-import facebookSrc from './facebook.svg';
-import githubSrc from './github.svg';
-import instaSrc from './insta.svg';
-import linkedinSrc from './linkedin.svg';
-import twitterSrc from './twitter.svg';
-import youtubeSrc from './youtube.svg';
+import CreatedBy from './CreatedBy';
+import FacebookSvg from './facebook.inline.svg';
+import GithubSvg from './github.inline.svg';
+import InstaSvg from './insta.inline.svg';
+import LinkedSvg from './linkedin.inline.svg';
+import TwitterSvg from './twitter.inline.svg';
+import YoutubeSvg from './youtube.inline.svg';
 
 const Contacts = ({
   email = '',
@@ -26,37 +27,41 @@ const Contacts = ({
       <br />
       <Link href={`tel:${phone}`}>{phone}</Link>
     </Text>
-    <Flex>
+    <Flex sx={{ alignItems: 'center' }}>
       {facebook && (
         <Link sx={iconBoxStyle} href={facebook} target="_blank">
-          <img src={facebookSrc} alt="facebook" />
-        </Link>
-      )}
-      {twitter && (
-        <Link sx={iconBoxStyle} href={twitter} target="_blank">
-          <img src={twitterSrc} alt="twitter" />
-        </Link>
-      )}
-      {youtube && (
-        <Link sx={iconBoxStyle} href={youtube} target="_blank">
-          <img src={youtubeSrc} alt="youtube" />
+          <FacebookSvg />
         </Link>
       )}
       {instagram && (
         <Link sx={iconBoxStyle} href={instagram} target="_blank">
-          <img src={instaSrc} alt="youtube" />
+          <InstaSvg />
+        </Link>
+      )}
+      {twitter && (
+        <Link sx={iconBoxStyle} href={twitter} target="_blank">
+          <TwitterSvg />
+        </Link>
+      )}
+      {youtube && (
+        <Link sx={iconBoxStyle} href={youtube} target="_blank">
+          <YoutubeSvg />
         </Link>
       )}
       {linkedin && (
         <Link sx={iconBoxStyle} href={linkedin} target="_blank">
-          <img src={linkedinSrc} alt="youtube" />
+          <LinkedSvg />
         </Link>
       )}
       {github && (
         <Link sx={iconBoxStyle} href={github} target="_blank">
-          <img src={githubSrc} alt="github" />
+          <GithubSvg />
         </Link>
       )}
+      <Box sx={{ flex: 1 }} />
+      <Box>
+        <CreatedBy />
+      </Box>
     </Flex>
   </Box>
 );
@@ -66,6 +71,9 @@ const iconBoxStyle = {
   height: 30,
   display: 'block',
   marginRight: 10,
+  '& svg path': {
+    fill: 'black',
+  },
 };
 
 export default Contacts;
