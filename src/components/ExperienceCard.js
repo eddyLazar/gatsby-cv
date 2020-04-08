@@ -12,7 +12,12 @@ const ExperienceCard = ({
     <Box mb="large">
       <Text
         as="p"
-        sx={{ color: 'gray3', fontStyle: 'italic', mb: 'medium' }}
+        sx={{
+          color: 'gray3',
+          fontStyle: 'italic',
+          mb: 'medium',
+          width: 'max-content',
+        }}
         variant="heading"
       >
         {period}

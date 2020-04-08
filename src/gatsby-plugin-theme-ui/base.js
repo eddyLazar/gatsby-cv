@@ -76,6 +76,7 @@ const theme = {
       fontWeight: 'normal',
       padding: 0,
       marginBottom: 'large',
+      width: 'max-content',
     },
     paragraph: {
       marginBottom: 'medium',
