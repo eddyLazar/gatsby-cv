@@ -59,7 +59,8 @@ socials:
   twitter: https://twitter.com/EddyLazar
   facebook: https://www.facebook.com/profile.php?id=100008334482401
   instagram: https://instagram.com/real.edos/
-  linkedin: https://www.linkedin.com/in/%D1%8D%D0%B4%D1%83%D0%B0%D1%80%D0%B4-%D0%BB%D0%B0%D0%B7%D0%B0%D1%80%D0%B5%D0%BD%D0%BA%D0%BE-11b75782/
+  # linkedin: https://www.linkedin.com/in/%D1%8D%D0%B4%D1%83%D0%B0%D1%80%D0%B4-%D0%BB%D0%B0%D0%B7%D0%B0%D1%80%D0%B5%D0%BD%D0%BA%D0%BE-11b75782/
+  github: https://github.com/eddyLazar/gatsby-cv
 ---
 
 I am a seasoned developer with more then 10 years of full stack experience. I've been working in different areas and with different technologies. I'm passionate about things I'm working on. I like architecting new things and invernting new ideas. I'm always keen on learning and exploring something new also ready to help others if needed. Excited about exchanging and discussing ideas with others.

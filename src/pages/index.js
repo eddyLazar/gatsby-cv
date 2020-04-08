@@ -133,7 +133,7 @@ export const query = graphql`
           twitter
           facebook
           instagram
-          linkedin
+          github
         }
       }
       html

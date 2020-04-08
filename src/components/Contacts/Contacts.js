@@ -1,12 +1,13 @@
 import React from 'react';
 import { Box, Flex, Link, Text } from 'theme-ui';
 import facebookSrc from './facebook.svg';
+import githubSrc from './github.svg';
 import instaSrc from './insta.svg';
 import linkedinSrc from './linkedin.svg';
 import twitterSrc from './twitter.svg';
 import youtubeSrc from './youtube.svg';
 
-const Bio = ({
+const Contacts = ({
   email = '',
   phone = '',
   facebook = '',
@@ -14,6 +15,7 @@ const Bio = ({
   youtube = '',
   instagram = '',
   linkedin = '',
+  github = '',
 }) => (
   <Box mb="medium">
     <Text variant="lead" as="p" sx={{ width: 'max-content' }}>
@@ -50,6 +52,11 @@ const Bio = ({
           <img src={linkedinSrc} alt="youtube" />
         </Link>
       )}
+      {github && (
+        <Link sx={iconBoxStyle} href={github} target="_blank">
+          <img src={githubSrc} alt="github" />
+        </Link>
+      )}
     </Flex>
   </Box>
 );
@@ -61,4 +68,4 @@ const iconBoxStyle = {
   marginRight: 10,
 };
 
-export default Bio;
+export default Contacts;
