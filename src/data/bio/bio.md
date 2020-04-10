@@ -63,4 +63,4 @@ socials:
   github: https://github.com/eddyLazar/gatsby-cv
 ---
 
-I am a seasoned developer with more then 10 years of full stack experience. I've been working in different areas and with different technologies. I'm passionate about things I'm working on. I like architecting new things and invernting new ideas. I'm always keen on learning and exploring something new also ready to help others if needed. Excited about exchanging and discussing ideas with others.
+I am a seasoned developer with more than 10 years of full stack experience. I've been working in different areas and with different technologies. I'm passionate about things I'm working on. I like architecting new things and invernting new ideas. I'm always keen on learning and exploring something new also ready to help others if needed. Excited about exchanging and discussing ideas with others.
