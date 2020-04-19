@@ -134,6 +134,7 @@ export const query = graphql`
           facebook
           instagram
           github
+          linkedin
         }
       }
       html

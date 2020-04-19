@@ -59,7 +59,7 @@ socials:
   twitter: https://twitter.com/EddyLazar
   facebook: https://www.facebook.com/profile.php?id=100008334482401
   instagram: https://instagram.com/real.edos/
-  # linkedin: https://www.linkedin.com/in/%D1%8D%D0%B4%D1%83%D0%B0%D1%80%D0%B4-%D0%BB%D0%B0%D0%B7%D0%B0%D1%80%D0%B5%D0%BD%D0%BA%D0%BE-11b75782/
+  linkedin: https://www.linkedin.com/in/eduard-lazarenko/
   github: https://github.com/eddyLazar/gatsby-cv
 ---
 
