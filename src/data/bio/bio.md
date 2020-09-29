@@ -1,7 +1,7 @@
 ---
 name: Eduard Lazarenko
 jobTitle: Software engineer
-email: hello@eddylazar.com
+email: eddy.lazar@gmail.com
 phone: '+972559803635'
 interests:
   - windsurfing
