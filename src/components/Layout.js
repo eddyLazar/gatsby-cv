@@ -9,6 +9,7 @@ export const Layout = ({ children }) => (
         height: ['initial', 'initial', '100%'],
         overflow: ['scroll', 'scroll', 'hidden'],
         flexDirection: ['column', 'column', 'row'],
+        maxHeight: '100vh',
       }}
     >
       {children}

@@ -89,23 +89,6 @@ const theme = {
       lineHeight: ['21.25px', '21.25px', '21.25px', lineHeight.medium],
     },
   },
-  layout: {
-    main: {
-      bg: 'background',
-      width: ['100%', '100%', '50%'],
-      overflowY: 'scroll',
-    },
-    skills: {
-      bg: 'gray1',
-      width: ['100%', '100%', '25%'],
-      overflowY: 'scroll',
-    },
-    experience: {
-      bg: 'black',
-      width: ['100%', '100%', '25%'],
-      overflowY: 'scroll',
-    },
-  },
   styles: {
     root: {
       fontFamily: 'body',

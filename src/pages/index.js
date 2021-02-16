@@ -60,10 +60,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO />
-      <MainColumn
-        variant="main"
-        header={<Header name={name} jobTitle={jobTitle} />}
-      >
+      <MainColumn header={<Header name={name} jobTitle={jobTitle} />}>
         <About html={aboutHtml} />
         <Text variant="lead" as="p" sx={{ width: 'max-content' }}>
           EDUCATION
