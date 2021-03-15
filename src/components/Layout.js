@@ -57,6 +57,6 @@ export const ExperienceColumn = ({ children }) => (
 );
 
 const columnStyle = {
-  overflowY: ['visible', 'scroll'],
+  overflowY: ['visible', 'visible', 'scroll'],
   padding: 'medium',
 };
