@@ -9,7 +9,7 @@ const ExperienceCard = ({
 }) => {
   const { theme } = useThemeUI();
   return (
-    <Box mb="large">
+    <Box mb="large" sx={{ pageBreakInside: 'avoid' }} className="exp-card">
       <Text
         as="p"
         sx={{
@@ -29,6 +29,7 @@ const ExperienceCard = ({
         {company}
       </Text>
       <div
+        className="exp-card-text"
         dangerouslySetInnerHTML={{ __html: html }}
         sx={{
           '& > p': {

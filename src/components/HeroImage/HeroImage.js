@@ -7,6 +7,7 @@ export const HeroImage = ({ html }) => {
 
   return (
     <Box
+      className="hero-image"
       sx={{
         width: '100%',
         height: [

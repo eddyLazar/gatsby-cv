@@ -1,0 +1,48 @@
+.link-for-pdf {
+  display: none;
+}
+
+.image-for-pdf {
+  display: none;
+}
+
+@media print {
+  .image-for-pdf {
+    display: initial;
+  }
+
+  .link-for-pdf {
+    display: initial;
+  }
+
+  .theme-toggle-text {
+    display: none;
+  }
+
+  .hero-image {
+    display: none !important;
+  }
+
+  .column-wrapper {
+    max-height: none !important;
+    display: block !important;
+  }
+
+  .main-column {
+    width: 100% !important;
+  }
+  .skills-column {
+    width: 100% !important;
+  }
+  .experience-column {
+    width: 100% !important;
+  }
+
+  .exp-card-text p {
+    color: #212121 !important;
+  }
+}
+
+@page {
+  margin: 0.5cm;
+}

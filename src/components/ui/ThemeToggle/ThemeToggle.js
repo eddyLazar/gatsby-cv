@@ -16,6 +16,7 @@ const ThemeToggle = ({ onClick = () => {} }) => {
     >
       <img src={lunaSrc} alt="" />
       <Text
+        className="theme-toggle-text"
         color="#fff"
         sx={{
           textTransform: 'uppercase',
@@ -27,6 +28,10 @@ const ThemeToggle = ({ onClick = () => {} }) => {
       >
         night mode
       </Text>
+      <div className="link-for-pdf">
+        <span>better look at it from here</span>
+        <a href="https://eddylazar.com/">eddylazar.com</a>
+      </div>
     </Link>
   );
 };

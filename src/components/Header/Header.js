@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Flex, Text, useColorMode, useThemeUI } from 'theme-ui';
+import MyImgSrc from '../../images/round.png';
 import { HeroImage } from '../HeroImage/HeroImage';
 import ThemeToggle from '../ui/ThemeToggle';
 
@@ -25,7 +26,9 @@ const Header = ({ jobTitle = '' }) => {
           <Text variant="p" mb="medium" sx={{ zIndex: 1 }} as="p">
             {jobTitle}
           </Text>
+          <img className="image-for-pdf" src={MyImgSrc} width="150" alt="" />
         </Box>
+
         <ThemeToggle
           onClick={e => {
             setColorMode(colorMode === 'default' ? 'dark' : 'default');

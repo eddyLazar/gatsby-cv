@@ -5,6 +5,7 @@ import InversionClick from './ui/InversionClick';
 export const Layout = ({ children }) => (
   <InversionClick>
     <Flex
+      className="column-wrapper"
       sx={{
         height: ['initial', 'initial', '100%'],
         overflow: ['scroll', 'scroll', 'hidden'],
@@ -19,7 +20,14 @@ export const Layout = ({ children }) => (
 
 export const MainColumn = ({ children, header = null }) => (
   <Box
-    sx={{ width: ['100%', '100%', '50%'], ...columnStyle, p: 0, bg: 'white' }}
+    className="main-column"
+    sx={{
+      width: ['100%', '100%', '50%'],
+      ...columnStyle,
+      p: 0,
+      bg: 'white',
+      pageBreakAfter: 'auto',
+    }}
   >
     {header}
     <Box p="medium">{children}</Box>
@@ -28,9 +36,11 @@ export const MainColumn = ({ children, header = null }) => (
 
 export const SkillsColumn = ({ children }) => (
   <Box
+    className="skills-column"
     sx={{
       bg: 'gray1',
       width: ['100%', '100%', '25%'],
+      pageBreakInside: 'avoid',
       ...columnStyle,
     }}
   >
@@ -43,6 +53,7 @@ export const SkillsColumn = ({ children }) => (
 
 export const ExperienceColumn = ({ children }) => (
   <Box
+    className="experience-column"
     sx={{
       bg: 'black',
       width: ['100%', '100%', '25%'],
