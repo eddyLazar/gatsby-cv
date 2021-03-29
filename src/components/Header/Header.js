@@ -28,7 +28,7 @@ const Header = ({ jobTitle = '' }) => {
           <img
             className="image-for-pdf"
             src="https://eddylazar.com/round.png"
-            width="150"
+            width="100"
             alt=""
           />
         </Box>
