@@ -4,12 +4,14 @@ jobTitle: Software engineer
 email: eddy.lazar@gmail.com
 phone: '+972559803635'
 interests:
+  - informal education
+  - podcasting
+  - jewish theology
   - windsurfing
   - hiking
   - yoga
   - travel
   - marshal arts
-  - podcasts
   - storytelling
   - mother nature
   - meditation
@@ -51,6 +53,7 @@ softSkills:
   - integrity
   - flexibility
   - tolerance
+  - positive thinking
 langs:
   - Russian — native
   - English — fluent
