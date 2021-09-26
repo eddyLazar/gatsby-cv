@@ -1,6 +1,6 @@
 ---
 items:
-  - name: The Jewish Agency For Israel, Educational Leaders Institute Courses
+  - name: Educational Leaders Institute,  Jewish Agency For Israel
     description:  Courses for jewish children camp counselor
     date: '2020'
   - name: ReactNext
