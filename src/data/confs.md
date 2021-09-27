@@ -1,7 +1,7 @@
 ---
 items:
   - name: Educational Leaders Institute,  Jewish Agency For Israel
-    description:  Courses for jewish children camp counselor
+    description:  Courses for children camp counselors
     date: '2020'
   - name: ReactNext
     description: International React Conference in Tel Aviv
