@@ -8,6 +8,7 @@ interests:
   - podcasting
   - jewish
   - hiking
+  - nature
   - travel
   - marshal arts
   - storytelling
