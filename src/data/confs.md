@@ -1,6 +1,6 @@
 ---
 items:
-  - name: Educational Leaders Institute,  Jewish Agency For Israel
+  - name: Educational Leaders Institute, JAFI
     description:  Courses for children camp counselors
     date: '2020'
   - name: ReactNext
