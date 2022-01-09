@@ -7,6 +7,7 @@ const TagList = ({ tags = [''] }) => (
     <div />
     {tags.map(tag => (
       <Box
+        className="print-tag"
         key={tag}
         sx={{
           display: 'inline-block',

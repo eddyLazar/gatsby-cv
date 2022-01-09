@@ -25,12 +25,6 @@ const Header = ({ jobTitle = '' }) => {
           <Text variant="p" mb="medium" sx={{ zIndex: 1 }} as="p">
             {jobTitle}
           </Text>
-          <img
-            className="image-for-pdf"
-            src="https://eddylazar.com/round.png"
-            width="100"
-            alt=""
-          />
         </Box>
 
         <ThemeToggle

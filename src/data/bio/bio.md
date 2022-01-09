@@ -6,18 +6,15 @@ phone: '+972559803635'
 interests:
   - informal education
   - podcasting
-  - jewish theology
+  - jewish
   - windsurfing
   - hiking
   - yoga
   - travel
   - marshal arts
   - storytelling
-  - mother nature
   - meditation
   - water sports
-  - healthy food
-  - cooking
 skills:
   - js
   - node
@@ -46,7 +43,7 @@ skills:
 softSkills:
   - problem solving
   - effective communication
-  - feedback giving
+  - feedback
   - open-mindedness
   - creativity
   - stress resistance
@@ -66,4 +63,4 @@ socials:
   github: https://github.com/eddyLazar/gatsby-cv
 ---
 
-I am a seasoned developer with more than 10 years of full-stack experience. I've been working in different areas and with different technologies. I'm passionate about things I'm working on. I like architecting new things and inventing new ideas. I'm always keen on learning and exploring something new also ready to help others if needed. Excited about exchanging and discussing ideas with others.
+Seasoned developer with more than 10 years of full-stack experience in web development. I've been working in different areas  with all kinds of technologies, backend, frontend, devops, mobile, desktop. I like architecting new things inventing new ideas and finding better ways. Excited about sharing, learning and teaching expirience and knowledge.

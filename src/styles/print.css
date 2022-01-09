@@ -7,6 +7,26 @@
 }
 
 @media print {
+  .print-tag {
+    /* padding: 0px !important; */
+    /* margin: 0px !important; */
+    color: black !important;
+  }
+
+  .print-tag p {
+    box-shadow: inset 0 0 0 1px black;
+    color: black !important;
+    /* background-color: black; */
+    /* padding: 0px !important; */
+    /* margin: 0px !important; */
+    /* padding-right: 8px !important; */
+    /* font-weight: 700; */
+    /* font-style: italic; */
+  }
+
+  .print-hide {
+    display: none;
+  }
   .image-for-pdf {
     display: initial;
   }

@@ -4,6 +4,4 @@ title: Junior Software Developer
 company: ООО «Культурная служба»
 ---
 
-Started my developer's career here. At first worked on features for a custom CRM/backoffice platform build with python, pylons framework.
-
-Worked on fullstack minor features for company new website. Backend with java, play framework and html/js/css for frontend.
+Started my developer's career here. At first worked on new features and supportinng a custom CRM/backoffice platform build with python, pylons framework. Than started to work on fullstack features for company new website. Backend: java, play framework, frontend: html/js/css.

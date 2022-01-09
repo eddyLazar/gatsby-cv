@@ -9,13 +9,15 @@ export default () => (
       margin: 0,
     }}
   >
-    Design by{' '}
-    <Link
-      href="https://www.kirillmartianov.com"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Kirill Martianov
-    </Link>
+    <div className="print-hide">
+      Design by{' '}
+      <Link
+        href="https://www.kirillmartianov.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Kirill Martianov
+      </Link>
+    </div>
   </Text>
 );

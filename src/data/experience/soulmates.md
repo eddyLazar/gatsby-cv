@@ -6,8 +6,8 @@ company: soulmates.pro
 
 Responsible for creating and supporting all web projects of a digital design agency. Collaborated closely with ui/ux designers on every step of the project development. Through this close collaboration sharpened my own skills and taste.
 
-Implemented services, strategies and techniques to automate processes similar for different projects(e.g. deployment, shared functionality, etc).
+Implemented services, strategies and techniques to automate similar processes for different projects(e.g. deployment, shared functionality, etc).
 
-Worked on a unified component design system for company projects.
+Worked on a unified component design system for company websites.
 
 Responsible for hiring tech staff.

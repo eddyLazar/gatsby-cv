@@ -29,7 +29,7 @@ const ThemeToggle = ({ onClick = () => {} }) => {
         night mode
       </Text>
       <div className="link-for-pdf">
-        <span>better look at it from here</span>
+        <span>better look at it from here </span>
         <a href="https://eddylazar.com/">eddylazar.com</a>
       </div>
     </Link>

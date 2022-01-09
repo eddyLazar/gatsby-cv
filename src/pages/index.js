@@ -127,7 +127,7 @@ export const query = graphql`
         interests
         langs
         socials {
-          twitter
+          # twitter
           facebook
           instagram
           github
