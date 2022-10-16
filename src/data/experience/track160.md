@@ -1,5 +1,5 @@
 ---
-period: 2020-present
+period: 2020-2022
 title: Senior Fullstack engineer
 company: Track160
 ---
