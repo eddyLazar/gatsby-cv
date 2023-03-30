@@ -1,5 +1,5 @@
 ---
-name: Eduard Lazarenko
+name: Eduard Lazar
 jobTitle: Software engineer
 email: eddy.lazar@gmail.com
 phone: '+972559803635'

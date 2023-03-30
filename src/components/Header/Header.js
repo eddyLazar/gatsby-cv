@@ -20,7 +20,7 @@ const Header = ({ jobTitle = '' }) => {
           <Text variant="heading" mb="small" as="h1" sx={{ zIndex: 1 }}>
             Eduard
             <br />
-            Lazarenko
+            Lazar
           </Text>
           <Text variant="p" mb="medium" sx={{ zIndex: 1 }} as="p">
             {jobTitle}
